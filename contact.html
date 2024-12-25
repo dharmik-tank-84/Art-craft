@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art & craft / Contact</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@200&family=Roboto:wght@300&family=Titillium+Web:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+        .formm {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    form {
+      width: 100%;
+      max-width: 500px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #5d9c59;
+    }
+
+    form label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    form input[type="submit"] {
+      width: 100%;
+      background-color: #5d9c59;
+      color: white;
+      padding: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #3d6e41;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <section class="header" id="HOME">
+        <nav>
+          <a href="index.html">
+            <img src="images/logo.png" class="logo" />
+          </a>
+          <ul id="sideMenu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="product.html">PRODUCT</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <i
+              class="ri-close-circle-line fas"
+              onclick="closeMenu()"
+              id="close"
+              style="color: white"
+            ></i>
+          </ul>
+          <i
+            class="ri-menu-line"
+            onclick="openMenu()"
+            id="close"
+            style="color: white"
+          ></i>
+        </nav>
+        <div class="text-box">
+            <h1>CONTACT US</h1>
+            </div>
+          
+        </section>
+
+        <!-- contact us -->
+
+        <div class="formm">
+              <form action="#">
+                <h2>Get In Touch</h2>
+                <label for="name">First Name</label>
+                <input type="text" id="name" placeholder="Enter your first name">
+
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" placeholder="Enter your last name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="Write your message"></textarea>
+
+                <input type="submit" value="Send Message">
+              </form>
+              </div>
+
+        <!-- --------------- Footer ----------- -->
+
+      <section class="footer">
+        <p>
+          Hello Everyone, My Name is Dhaval Pandav. I am learning build Web
+          Development. contact Us On Our Social Media
+        </p>
+        <div class="icons">
+          <a href="index.html" ><i class="fa fa-brands fa-instagram"></i></a>
+          <a href="index.html" ><i class="fa fa-brands fa-linkedin"></i></a>
+          <a href="index.html"><i class="fa fa-brands fa-facebook"></i></a>
+          <a href="index.html" ><i class="fa fa-brands fa-twitter"></i>
+        </div>
+        <p class="last">
+          <strong
+            >Made With <i class="fa-regular fa-heart"></i> By Dhaval
+            pandav</strong
+          >
+        </p>
+      </section>
+
+        <!--------------- JavaScript fro toggle menu ------------->
+
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

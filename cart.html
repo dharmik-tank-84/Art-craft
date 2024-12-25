@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art & craft / Cart</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@200&family=Roboto:wght@300&family=Titillium+Web:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="header" id="HOME">
+      <nav>
+        <a href="index.html">
+          <img src="images/logo.png" class="logo" />
+        </a>
+        <ul id="sideMenu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="product.html">PRODUCT</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+          <li>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+          <i
+            class="ri-close-circle-line fas"
+            onclick="closeMenu()"
+            id="close"
+            style="color: white"
+          ></i>
+        </ul>
+        <i
+          class="ri-menu-line"
+          onclick="openMenu()"
+          id="close"
+          style="color: white"
+        ></i>
+      </nav>
+      <div class="text-box">
+          <h1>Art & Craft Cart</h1>
+        </div>
+    </section>
+
+    <div class="cart-page">
+      <h1 class="heading">Your Cart</h1>
+      <table class="cart-table" id="cartTable">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="total" id="totalPrice">Total: $0.00</div>
+      <button id="place-order">Place Order</button>
+    </div>
+     <!-- --------------- Footer ----------- -->
+
+      <section class="footer">
+        <p>
+          Hello Everyone, My Name is Dhaval Pandav. I am learning build Web
+          Development. contact Us On Our Social Media
+        </p>
+        <div class="icons">
+          <a href="index.html" ><i class="fa fa-brands fa-instagram"></i></a>
+          <a href="index.html" ><i class="fa fa-brands fa-linkedin"></i></a>
+          <a href="index.html"><i class="fa fa-brands fa-facebook"></i></a>
+          <a href="index.html" ><i class="fa fa-brands fa-twitter"></i>
+        </div>
+        <p class="last">
+          <strong
+            >Made With <i class="fa-regular fa-heart"></i> By Dhaval
+            pandav</strong
+          >
+        </p>
+      </section>
+
+      <script src="js/script.js"></script>
+    <script>
+       const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartTableBody = document.querySelector("#cartTable tbody");
+      const totalPriceEl = document.getElementById("totalPrice");
+      const placeOrderBtn = document.getElementById("place-order");
+
+      function renderCart() {
+        cartTableBody.innerHTML = "";
+        let total = 0;
+
+         if (cart.length === 0) {
+          cartTableBody.innerHTML = "<p>Your cart is empty.</p>";
+          totalPriceEl.textContent = "";
+          placeOrderBtn.style.display = "none"; 
+          return;
+        }
+
+        placeOrderBtn.style.display = "block"; 
+
+        cart.forEach((item, index) => {
+          total += item.price;
+          const row = `
+            <tr>
+              <td>${item.name}</td>
+              <td>$${item.price.toFixed(2)}</td>
+              <td>
+                <button onclick="removeFromCart(${index})">Remove</button>
+              </td>
+            </tr>
+          `;
+          cartTableBody.innerHTML += row;
+        });
+
+        totalPriceEl.innerText = `Total: $${total.toFixed(2)}`;
+      }
+
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
+        renderCart();
+      }
+
+      placeOrderBtn.addEventListener("click", () => {
+        if (cart.length === 0) {
+          alert("Your cart is empty!");
+          return;
+        }
+        alert("Your order has been placed successfully!");
+        localStorage.removeItem("cart");
+        renderCart();
+        location.reload();
+      });
+
+      renderCart();
+    </script>
+  </body>
+</html>

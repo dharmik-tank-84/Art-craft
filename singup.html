@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Crafty Creations</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="login-container signup-container">
+      <div class="login-form-section">
+        <form id="signup-form" class="login-form">
+          <div class="logo">
+            <img src="images/logo.png" alt="Crafty Creations Logo" />
+          </div>
+          <h2>CREATE YOUR ACCOUNT</h2>
+          <br />
+          <br />
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+            />
+          </div>
+          <div class="form-group checkbox">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms"
+              >I agree to the Terms of Service and Privacy Policy</label
+            >
+          </div>
+          <button type="submit" class="login-btn">Sign Up</button>
+          <div class="signup-link">
+            <p>Already have an account? <a href="login.html">Log In</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="signup.js"></script>
+  </body>
+</html>

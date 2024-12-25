@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art & craft / Collage Students</title>
+    <link rel="stylesheet" href="css/collage_student.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@200&family=Roboto:wght@300&family=Titillium+Web:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <section class="header" id="HOME">
+        <nav>
+          <a href="index.html">
+            <img src="images/logo.png" class="logo" />
+          </a>
+          <ul id="sideMenu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="product.html">PRODUCT</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <i
+              class="ri-close-circle-line fas"
+              onclick="closeMenu()"
+              id="close"
+              style="color: white"
+            ></i>
+          </ul>
+          <i
+            class="ri-menu-line"
+            onclick="openMenu()"
+            id="close"
+            style="color: white"
+          ></i>
+        </nav>
+
+        <div class="text-box">
+           <h1>Welcome to the College Students Page</h1>
+      <p>
+        Discover the achievements and activities of our talented college
+        students. Explore their stories and projects!
+      </p>
+      <a href="#students" class="hero-btn">Explore Students</a>
+      </div>
+      </section>
+
+      <section class="content" id="students">
+        <h2>Our Students</h2>
+        <div class="students">
+          <div class="student-card">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Student 1" />
+            <div class="card-content">
+              <h3>Jane Doe</h3>
+              <p>
+                Jane is a computer science student specializing in web
+                development. She has completed numerous projects in React.js and
+                Node.js.
+              </p>
+              <a href="#" class="btn">Read More</a>
+            </div>
+          </div>
+          <div class="student-card">
+            <img src="https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Student 2" />
+            <div class="card-content">
+              <h3>John Smith</h3>
+              <p>
+                John is a creative art student who excels in graphic design and
+                photography. His work has been displayed in multiple
+                exhibitions.
+              </p>
+              <a href="#" class="btn">Read More</a>
+            </div>
+          </div>
+          <div class="student-card">
+            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Student 3" />
+            <div class="card-content">
+              <h3>Alice Johnson</h3>
+              <p>
+                Alice is an engineering student passionate about AI and
+                robotics. She has built several AI-powered robots during her
+                tenure.
+              </p>
+              <a href="#" class="btn">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            <!-- --------------- Footer ----------- -->
+
+      <section class="footer">
+        <p>
+          Hello Everyone, My Name is Dhaval Pandav. I am learning build Web
+          Development. contact Us On Our Social Media
+        </p>
+        <div class="icons">
+          <a href="index.html" ><i class="fa fa-brands fa-instagram"></i></a>
+          <a href="index.html" ><i class="fa fa-brands fa-linkedin"></i></a>
+          <a href="index.html"><i class="fa fa-brands fa-facebook"></i></a>
+          <a href="index.html" ><i class="fa fa-brands fa-twitter"></i>
+        </div>
+        <p class="last">
+          <strong
+            >Made With <i class="fa-regular fa-heart"></i> By Dhaval
+            pandav</strong
+          >
+        </p>
+      </section>
+    </div>
+
+
+
+    <!--------------- JavaScript fro toggle menu ------------->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
