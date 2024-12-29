@@ -7,7 +7,7 @@
 
 ### 💻 Tech Stack
 - **Frontend**: React.js, Next.js, HTML, CSS, SCSS, Bootstrap, Tailwind CSS
-- **Tools**: JSON Server, MongoDB Compass, Adobe Premiere Pro, Figma
+- **Tools**: JSON Server, MongoDB Compass, Adobe PhotoShop, Figma
 
 ### 🌐 Let's Connect
 - [Portfolio](https://dharmik-tank.web.app/)
